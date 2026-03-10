@@ -27,9 +27,9 @@ class SimpleNN(nn.Module):
 
 # CENTRALIZED TRAINING
 def train_centralized(num_epochs=20, device='cpu'):
-    print("\n" + "="*70)
+    print("\n" + "*"*70)
     print("CENTRALIZED TRAINING (Baseline)")
-    print("="*70 + "\n")
+    print("*"*70 + "\n")
     
     # Load data
     transform = transforms.Compose([
@@ -123,7 +123,7 @@ def plot_centralized_results(history):
     
     plt.tight_layout()
     plt.savefig('centralized_baseline.png', dpi=300, bbox_inches='tight')
-    print("✓ Saved: centralized_baseline.png")
+    print("Saved: centralized_baseline.png")
     plt.show()
 
 if __name__ == "__main__":
