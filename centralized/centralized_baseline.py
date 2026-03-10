@@ -37,8 +37,8 @@ def train_centralized(num_epochs=20, device='cpu'):
         transforms.Normalize((0.1307,), (0.3081,))
     ])
     
-    train_dataset = datasets.MNIST('./data', train=True, download=True, transform=transform)
-    test_dataset = datasets.MNIST('./data', train=False, transform=transform)
+    train_dataset = datasets.MNIST('././data', train=True, download=True, transform=transform)
+    test_dataset = datasets.MNIST('././data', train=False, transform=transform)
     
     train_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)
     test_loader = DataLoader(test_dataset, batch_size=1000, shuffle=False)
